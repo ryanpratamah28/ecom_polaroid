@@ -103,7 +103,7 @@
                                         <li>
                                             <a class="dropdown-item" href="/profile">
                                                 <i class="bx bx-user me-2"></i>
-                                                <span class="align-middle">My Profile</span>
+                                                <span class="align-middle">Profil saya</span>
                                             </a>
                                         </li>
                                         @if (Auth::check())
@@ -123,7 +123,7 @@
                                         <li>
                                             <a class="dropdown-item" href="{{ route('logout') }}">
                                                 <i class="bx bx-power-off me-2"></i>
-                                                <span class="align-middle">Log Out</span>
+                                                <span class="align-middle">Keluar</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -144,8 +144,8 @@
                                     @auth
                                         <div></div>
                                     @else
-                                        <a href="/login" class="button button-outline button-outline-primary">Login</a>
-                                        <a href="/register" class="button button-primary">Sign Up</a>
+                                        <a href="/login" class="button button-outline button-outline-primary">Masuk</a>
+                                        <a href="/register" class="button button-primary">Daftar</a>
                                     @endauth
                                 @endif
                             </div>
@@ -168,7 +168,7 @@
             <div class="row line">
                 <div class="col-12 col-lg-3 mb-4 mb-lg-0">
                     <div class="categoriesContainer">
-                        <h4>Kategori</h4>
+                        <h4>List Kategori</h4>
                         <div class="wrapperCategories row">
                             @foreach ($categories as $category)
                                 <div class="col-12 col-sm-6 col-md-3 col-lg-12">
@@ -190,9 +190,10 @@
                     <div class="bestOfferContainer">
                         <a href="#" class="header-line">
                             <img src="./assets/img/icon/icons8-hot-price-30.png" alt="" />
-                            <p>Penawaran Terbaik</p>
+                            <p>Rekomendasi Produk</p>
                         </a>
                         <div class="bestOfferProduct">
+                            @if(count($products) >= 4)
                             @foreach ($products as $bestProduct)
                                 <a href="{{ route('detail.product', $bestProduct->id) }}" class="product">
                                     <div class="imagesProduct">
@@ -214,6 +215,7 @@
                                     </div>
                                 </a>
                             @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>

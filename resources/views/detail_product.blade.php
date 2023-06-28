@@ -91,7 +91,7 @@
                                         <li>
                                             <a class="dropdown-item" href="{{ route('profile') }}">
                                                 <i class="bx bx-user me-2"></i>
-                                                <span class="align-middle">My Profile</span>
+                                                <span class="align-middle">Profil saya</span>
                                             </a>
                                         </li>
                                         @if (Auth::check())
@@ -111,7 +111,7 @@
                                         <li>
                                             <a class="dropdown-item" href="{{ route('logout') }}">
                                                 <i class="bx bx-power-off me-2"></i>
-                                                <span class="align-middle">Log Out</span>
+                                                <span class="align-middle">Keluar</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -127,8 +127,8 @@
                             <div class="beforeLogin">
                                 <div class="buttonWrapper">
                                     <a href="{{ route('login.page') }}"
-                                        class="button button-outline button-outline-primary">Login</a>
-                                    <a href="{{ route('register.page') }}" class="button button-primary">Sign Up</a>
+                                        class="button button-outline button-outline-primary">Masuk</a>
+                                    <a href="{{ route('register.page') }}" class="button button-primary">Daftar</a>
                                 </div>
 
                                 <div class="cartWrapper">
@@ -149,7 +149,7 @@
                 <div class="row first-line">
                     <div class="col-12 col-lg-8 col-xl-9">
                         <a class="btn btn-outline-danger" href="/show"
-                            style="width: 100px; margin: -20px 0 10px 0;">Back</a>
+                            style="width: 100px; margin: -20px 0 10px 0;">Kembali</a>
                         <div class="card">
                             <div class="wrapperDetailProduct row">
                                 <div class="col-12 col-lg-5">

@@ -8,12 +8,12 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Username</th>
+                        <th>Nama</th>
                         <th>Email</th>
-                        <th>Address</th>
-                        <th>Phone</th>
-                        <th>Role</th>
-                        <th>Action</th>
+                        <th>Alamat</th>
+                        <th>Nomor Telepon</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
@@ -32,18 +32,11 @@
                             @endif
                         @endif
                         <td>
-                            <div class="dropdown">
-                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                </button>
-                                <div class="dropdown-menu">
-                                     <form method="POST" action="{{ route('users.delete', $users->id) }}" class="dropdown-item">
+                            <form method="POST" action="{{ route('users.delete', $users->id) }}">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="btn btn-danger ms-1" type="submit"><i class="bx bx-trash me-1"></i>Delete</button>
-                                </form>
-                                </div>
-                            </div>
+                                    <button class="btn btn-danger ms-1" type="submit"><i class="bx bx-trash me-1"></i>Hapus</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
