@@ -29,12 +29,12 @@
                             <td>{{ $orders->product }} / {{ $orders->category }}</td>
                             <td>
                                 @if($orders['status'] == 3 || $orders['status'] == 1)
-                                    <p style="color: green">Di Terima</p>
+                                    <p style="color: green">Terima</p>
                                     @if ($orders['updated_at'])
                                         <p>Tanggal Update: {{ $orders['updated_at']->format('d-m-Y') }}</p>
                                     @endif
                                 @elseif($orders['status'] == 2)
-                                    <p style="color: red">Di Ditolak</p>
+                                    <p style="color: red">Tolak</p>
                                 @else
                                     <div class="d-flex gap-2">
                                         <form action="{{ route('validasi', $orders->id) }}" method="POST">
