@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FP E-Commerce</title>
+    <title>MISOBAE.ID</title>
 
     <!--Bootstrap Css-->
     <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
@@ -31,7 +31,7 @@
                     <div class="leftSideNavbar">
                         <div class="text-logo">
                             <a href="/show" class="text-decoration-none">
-                                <h1 class="me-3" style="color: #8d6e63">FP</h1>
+                                <h1 class="me-3" style="color: #8d6e63">MISOBAE.ID</h1>
                             </a>
                         </div>
                     </div>
@@ -63,15 +63,15 @@
                                 <div class="menu-profile">
                                     <a href="/profile" class="menu">
                                         <ion-icon name="person"></ion-icon>
-                                        Account
+                                        Akun
                                     </a>
                                     <a href="/history" class="menu">
                                         <ion-icon name="cart"></ion-icon>
-                                        History Transaction
+                                        Riwayat Transaksi
                                     </a>
                                     <a href="{{route('logout')}}" class="menu logout">
                                         <ion-icon name="log-out"></ion-icon>
-                                        Logout
+                                        Keluar
                                     </a>
                                 </div>
                             </div>

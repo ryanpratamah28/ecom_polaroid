@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FP E-Commerce</title>
+    <title>MISOBAE.ID</title>
 
     <!--Bootstrap Css-->
     <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
@@ -29,7 +29,7 @@
                     <div class="leftSideNavbar">
                         <div class="text-logo">
                             <a href="/show" class="text-decoration-none">
-                                <h1 class="me-3" style="color: #8d6e63">FP</h1>
+                                <h1 class="me-3" style="color: #8d6e63">MISOBAE.ID</h1>
                             </a>
                         </div>
                     </div>
