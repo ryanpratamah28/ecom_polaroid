@@ -633,6 +633,7 @@ function calculateTotalPrice() {
       event.preventDefault();
       var dataTab = document.getElementById("nav-personalData-tab");
       dataTab.click();
+      location.href = location.href;
       alert("Silakan submit formulir terlebih dahulu sebelum mengakses halaman pembayaran!");
     }
   });
