@@ -1,7 +1,7 @@
-@extends('admin.layout.dashboard')
+@extends('admin.layout.dashboard-admin')
 
-@section('dashboard')
-    <div class="card">
+@section('content-main')
+    {{-- <div class="card">
         <h5 class="card-header">List Kategori</h5>
         <div class="table-responsive text-nowrap">
             <table class="table table-hover">
@@ -36,5 +36,43 @@
                 </tbody>
             </table>
         </div>
+    </div> --}}
+
+    <h2 class="pageNameContent">List Kategori</h2>
+
+    <div class="wrapperTable table-responsive">
+        <table id="listCategoryTable" class="tables" style="width:100%">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nama Kategori</th>
+                    <th>Gambar Kategori</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($categories as $category)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $category->name }}</td>
+                        <td>
+                            <img src="{{ asset('storage/images/' . $category->thumb_img) }}"width="100px" alt="">
+                        </td>
+                        <td>
+                            <form method="POST" action="{{ route('delete.category', $category->id) }}" class="d-flex">
+                                <a class="btn btn-success d-flex align-items-center me-1"
+                                    href="{{ route('edit.category', $category->id) }}"><i
+                                        class="bx bx-edit-alt me-1"></i>Ubah</a>
+
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger d-flex align-items-center ms-1" type="submit"><i
+                                        class="bx bx-trash me-1"></i>Hapus</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
 @endsection

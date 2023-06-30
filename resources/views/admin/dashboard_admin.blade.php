@@ -1,6 +1,6 @@
-@extends('admin.layout.dashboard')
+@extends('admin.layout.dashboard-admin')
 
-@section('dashboard')
+@section('content-main')
     <div class="card">
         <div class="d-flex align-items-end row">
             <div class="col-sm-7">

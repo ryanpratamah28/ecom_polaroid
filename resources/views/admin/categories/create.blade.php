@@ -1,15 +1,14 @@
-@extends('admin.layout.dashboard')
+@extends('admin.layout.dashboard-admin')
 
-@section('dashboard')
-    <div class="card mb-4">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">Buat Kategori Produk</h5>
-        </div>
+@section('content-main')
+    <div class="card">
         <div class="card-body">
+            <h5 class="mb-4">Buat Kategori Produk</h5>
+
             <form action="{{route('dashboard.store.category')}}" method="POST" enctype="multipart/form-data">
                 @csrf 
 
-                <div class="mb-3">
+                <div class="mb-4">
                     <label class="form-label" for="basic-default-fullname">Nama Kategori</label>
                     <input type="text" class="form-control" placeholder="Gadget" name="name"/>
                     @error('name')
@@ -17,7 +16,7 @@
                     @enderror
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="formFile" class="form-label">Gambar Thumbnail</label>
                     <input class="form-control" type="file"  name="thumb_img" />
                     @error('thumb_img')
