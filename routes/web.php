@@ -56,6 +56,7 @@ Route::middleware(['isLogin', 'CekRole:admin,user'])->group(function () {
 // ROLE ADMIN
 Route::middleware(['isLogin', 'CekRole:admin'])->prefix('/dashboard')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index.admin');
+    // Route::get('/admin', [AdminController::class, 'dashAdmin'])->name('dash.admin');
 
         // CRUD PRODUCT
         Route::prefix('/product')->group(function () {

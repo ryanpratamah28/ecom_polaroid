@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FP E-Commerce</title>
+    <title>MISOBAE.ID</title>
 
     <!--Bootstrap Css-->
     <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css" />
@@ -35,7 +35,7 @@
                     <div class="leftSideNavbar">
                         <div class="logo-brand">
                             <a href="{{ route('homepage') }}" class="text-black text-decoration-none">
-                                <h1 class="me-3" style="color: #8d6e63">FP</h1>
+                                <h1 class="me-3" style="color: #8d6e63">MISOBAE.ID</h1>
                             </a>
                         </div>
                         <!-- <div class="searchMenu">
@@ -78,16 +78,16 @@
                                                 <div class="d-flex">
                                                     <!-- <div class="flex-shrink-0 me-3">
                                                         @if (is_null($user['image_profile']))
-                                                            <div class="avatar avatar-online">
+<div class="avatar avatar-online">
                                                                 <img src="./assets/img/avatars/1.png" alt=""
                                                                     class="w-px-40 h-auto rounded-circle">
                                                             </div>
-                                                        @else
-                                                        <div class="avatar avatar-online">
+@else
+<div class="avatar avatar-online">
                                                                 <img src="{{ asset('assets/img/' . Auth::user()->image_profile) }}"
                                                                     alt="" class="w-px-40 h-auto rounded-circle">
                                                             </div>
-                                                        @endif
+@endif
                                                     </div> -->
                                                     <div class="flex-grow-1">
                                                         <span
@@ -164,67 +164,35 @@
     </div>
 
     <div id="mainContent" style="margin-top: 150px">
-        <div class="container">
-            <div class="row line">
-                <div class="col-12 col-lg-3 mb-4 mb-lg-0">
-                    <div class="categoriesContainer">
-                        <h4>List Kategori</h4>
-                        <div class="wrapperCategories row">
-                            @foreach ($categories as $category)
-                                <div class="col-12 col-sm-6 col-md-3 col-lg-12">
-                                    <a href="#" class="categoriesPlant">
-                                        <div class="imagesCategories">
-                                            <img src="{{ asset('storage/images/' . $category->thumb_img) }}"
-                                                alt="">
-                                        </div>
-                                        <p class="nameCategories">
-                                            {{ $category->name }}
-                                        </p>
-                                    </a>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-9">
-                    <div class="bestOfferContainer">
-                        <a href="#" class="header-line">
-                            <img src="./assets/img/icon/icons8-hot-price-30.png" alt="" />
-                            <p>Rekomendasi Produk</p>
-                        </a>
-                        <div class="bestOfferProduct">
-                            @if(count($products) >= 4)
-                            @foreach ($products as $bestProduct)
-                                <a href="{{ route('detail.product', $bestProduct->id) }}" class="product">
-                                    <div class="imagesProduct">
-                                        <img src="{{ asset('storage/images/' . $bestProduct->thumb_img) }}"
-                                            width="250px" alt="">
-                                    </div>
 
-                                    <div class="infoProduct">
-                                        <p class="nameProduct">
-                                            {{ $bestProduct->name }}
-                                        </p>
-                                        <p class="price">Rp. {{ number_format($bestProduct->price, 0, ',', '.') }}
-                                        </p>
-                                        <div class="discountDetail">
-                                            <div class="discountValue">
-                                                {{ $bestProduct->category->name }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            @endforeach
-                            @endif
+        <div class="wrapperProduct line">
+            <div class="container">
+                <a href="#" class="header-line">
+                    <img src="./assets/img/icon/icons8-menu-24.png" alt=""/>
+                    <p>Kategori</p>
+                </a>
+
+                <div class="row d-flex">
+                    @foreach ($categories as $category)
+                        <div class="d-flex align-items-center bg-white rounded-pill p-2 me-3 mb-3" style="width: auto">
+                            <div class="imagesCategories me-1">
+                                <img src="{{ asset('storage/images/' . $category->thumb_img) }}" width="60"
+                                    style="aspect-ratio: 2/2; object-fit: contain; border-radius: 50%;">
+                            </div>
+
+                            <p class="nameCategories ms-1">
+                                {{ $category->name }}
+                            </p>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
+
         <div class="wrapperProduct line">
             <div class="container pb-5">
                 <a href="#" class="header-line">
-                    <img src="./assets/img/icon/icons8-open-end-wrench-100.png" alt="" />
+                    <img src="./assets/img/icon/icons8-box-16.png" alt="" />
                     <p>Semua Produk</p>
                 </a>
 
@@ -316,43 +284,42 @@
             slidesToShow: 3.2,
             slidesToScroll: 3,
 
-				responsive: [
-					{
-						breakpoint: 768,
-						settings: {
-							slidesToShow: 2.2,
-							slidesToScroll: 2,
-						},
-					},
-				],
-			});
-		</script>
-	
-		
-		<script>
-			$(document).ready(function() {
-        // Mengambil data dari localStorage saat halaman dimuat
-        var cartData = JSON.parse(localStorage.getItem('cartData')) || [];
-
-        function updateTotalItem() {
-            var totalItem = cartData.length;
-            $('.totalItem').text(totalItem);
-        }
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2.2,
+                    slidesToScroll: 2,
+                },
+            }, ],
+        });
+    </script>
 
 
     <script>
         $(document).ready(function() {
-            // Mengambil data dari localStorage saat halaman dimuat
-            var cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+                    // Mengambil data dari localStorage saat halaman dimuat
+                    var cartData = JSON.parse(localStorage.getItem('cartData')) || [];
 
-            function updateTotalItem() {
-                var totalItem = cartData.length;
-                $('.totalItem').text(totalItem);
-            }
+                    function updateTotalItem() {
+                        var totalItem = cartData.length;
+                        $('.totalItem').text(totalItem);
+                    }
 
-            // Fungsi untuk menghasilkan elemen HTML untuk setiap item dalam data keranjang
-            function generateCartItemHTML(item, index) {
-                return `
+
+                    <
+                    script >
+                        $(document).ready(function() {
+                            // Mengambil data dari localStorage saat halaman dimuat
+                            var cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+
+                            function updateTotalItem() {
+                                var totalItem = cartData.length;
+                                $('.totalItem').text(totalItem);
+                            }
+
+                            // Fungsi untuk menghasilkan elemen HTML untuk setiap item dalam data keranjang
+                            function generateCartItemHTML(item, index) {
+                                return `
                 <div class="product-list">
                     <div class="form-check checkbox-select checkbox-item">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -382,77 +349,77 @@
                     </div>
                 </div>
             `;
-            }
+                            }
 
-            // Fungsi untuk mengupdate total price
-            function updateTotalPrice() {
-                var totalPrice = 0;
-                for (var i = 0; i < cartData.length; i++) {
-                    totalPrice += cartData[i].totalPrice;
-                }
-                $('.value-total-fix').text('Rp. ' + totalPrice);
-            }
+                            // Fungsi untuk mengupdate total price
+                            function updateTotalPrice() {
+                                var totalPrice = 0;
+                                for (var i = 0; i < cartData.length; i++) {
+                                    totalPrice += cartData[i].totalPrice;
+                                }
+                                $('.value-total-fix').text('Rp. ' + totalPrice);
+                            }
 
-            // Fungsi untuk mengupdate harga total per item
-            function updateItemTotalPrice(index) {
-                var item = cartData[index];
-                var priceElement = $('.price[data-index="' + index + '"]');
-                priceElement.text(item.totalPrice);
-                priceElement.attr('data-price', item.totalPrice);
-            }
+                            // Fungsi untuk mengupdate harga total per item
+                            function updateItemTotalPrice(index) {
+                                var item = cartData[index];
+                                var priceElement = $('.price[data-index="' + index + '"]');
+                                priceElement.text(item.totalPrice);
+                                priceElement.attr('data-price', item.totalPrice);
+                            }
 
-            // Fungsi untuk menghapus item dari keranjang berdasarkan index
-            function deleteCartItem(index) {
-                cartData.splice(index, 1);
-                localStorage.setItem('cartData', JSON.stringify(cartData));
-                location.reload();
-                $('.body-cart').empty(); // Menghapus elemen HTML sebelum memperbarui
-                updateCartItems(); // Memperbarui tampilan keranjang setelah menghapus item
-            }
+                            // Fungsi untuk menghapus item dari keranjang berdasarkan index
+                            function deleteCartItem(index) {
+                                cartData.splice(index, 1);
+                                localStorage.setItem('cartData', JSON.stringify(cartData));
+                                location.reload();
+                                $('.body-cart').empty(); // Menghapus elemen HTML sebelum memperbarui
+                                updateCartItems(); // Memperbarui tampilan keranjang setelah menghapus item
+                            }
 
-            // Fungsi untuk memperbarui quantity item dalam keranjang
-            function updateCartItemQuantity(index, quantity) {
-                cartData[index].quantity = quantity;
-                cartData[index].totalPrice = quantity * cartData[index].price; // Mengupdate totalPrice
-                localStorage.setItem('cartData', JSON.stringify(cartData));
-                updateTotalPrice(); // Memperbarui total price
-                updateItemTotalPrice(index); // Memperbarui harga total per item
-            }
+                            // Fungsi untuk memperbarui quantity item dalam keranjang
+                            function updateCartItemQuantity(index, quantity) {
+                                cartData[index].quantity = quantity;
+                                cartData[index].totalPrice = quantity * cartData[index].price; // Mengupdate totalPrice
+                                localStorage.setItem('cartData', JSON.stringify(cartData));
+                                updateTotalPrice(); // Memperbarui total price
+                                updateItemTotalPrice(index); // Memperbarui harga total per item
+                            }
 
-            // Menambahkan elemen HTML untuk setiap item dalam data keranjang
-            function updateCartItems() {
-                var cartContainer = $('.body-cart');
-                for (var i = 0; i < cartData.length; i++) {
-                    var itemHTML = generateCartItemHTML(cartData[i], i);
-                    cartContainer.append(itemHTML);
-                }
-            }
+                            // Menambahkan elemen HTML untuk setiap item dalam data keranjang
+                            function updateCartItems() {
+                                var cartContainer = $('.body-cart');
+                                for (var i = 0; i < cartData.length; i++) {
+                                    var itemHTML = generateCartItemHTML(cartData[i], i);
+                                    cartContainer.append(itemHTML);
+                                }
+                            }
 
-            // Menangani klik tombol minus dan plus
-            $('.body-cart').on('click', '.quantity-count', function() {
-                var action = $(this).data('action');
-                var index = $(this).data('index');
-                var quantityInput = $('.product-quantity[data-index="' + index + '"]');
-                var quantity = parseInt(quantityInput.val());
-                if (action === 'minus' && quantity > 0) {
-                    quantityInput.val(quantity - 1);
-                    updateCartItemQuantity(index, quantity - 1);
-                } else if (action === 'add' && quantity < 10) {
-                    quantityInput.val(quantity + 1);
-                    updateCartItemQuantity(index, quantity + 1);
-                }
-            });
+                            // Menangani klik tombol minus dan plus
+                            $('.body-cart').on('click', '.quantity-count', function() {
+                                var action = $(this).data('action');
+                                var index = $(this).data('index');
+                                var quantityInput = $('.product-quantity[data-index="' + index + '"]');
+                                var quantity = parseInt(quantityInput.val());
+                                if (action === 'minus' && quantity > 0) {
+                                    quantityInput.val(quantity - 1);
+                                    updateCartItemQuantity(index, quantity - 1);
+                                } else if (action === 'add' && quantity < 10) {
+                                    quantityInput.val(quantity + 1);
+                                    updateCartItemQuantity(index, quantity + 1);
+                                }
+                            });
 
-            // Menangani klik tombol hapus
-            $('.body-cart').on('click', '.delete-cart-button', function() {
-                var index = $(this).data('index');
-                deleteCartItem(index);
-            });
+                            // Menangani klik tombol hapus
+                            $('.body-cart').on('click', '.delete-cart-button', function() {
+                                var index = $(this).data('index');
+                                deleteCartItem(index);
+                            });
 
-            updateCartItems(); // Memperbarui tampilan keranjang saat halaman dimuat
-            updateTotalPrice(); // Memperbarui total price saat halaman dimuat
-            updateTotalItem();
-        });
+                            updateCartItems(); // Memperbarui tampilan keranjang saat halaman dimuat
+                            updateTotalPrice(); // Memperbarui total price saat halaman dimuat
+                            updateTotalItem();
+                        });
     </script>
 </body>
 

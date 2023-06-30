@@ -975,7 +975,7 @@ input[type="checkbox"]:focus {
 }
 
 .line {
-  margin-top: 64px;
+  margin-top: 30px;
 }
 
 .first-line {
@@ -1020,7 +1020,7 @@ input[type="checkbox"]:focus {
 
 .header-line img {
   width: 100%;
-  max-width: 36px;
+  max-width: 18px;
   margin-right: .5rem;
 }
 
