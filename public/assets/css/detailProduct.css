@@ -20,6 +20,33 @@ p {
     font-family: "Poppins", sans-serif;
 }
 
+.first-line{
+    display: flex;
+    flex-direction: column;
+}
+
+.col-12.col-lg-8.col-xl-9.top{
+    width: 100%;
+}
+
+.col-12.col-lg-4.col-xl-3.bottom{
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.col-12.col-lg-4.col-xl-3.bottom .card{
+    margin-top: -40px;
+}
+
+.wrapper-delivery{
+    margin-top: 50px;
+}
+
+.wrapper-delivery .card{
+    width: 100%;
+}
+
 /*Colors palette*/
 .wrapperDetailProduct .wrapper-image-product .view-Images .slick-list {
     margin: 0 -5px;

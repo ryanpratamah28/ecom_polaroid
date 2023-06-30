@@ -62,7 +62,7 @@
         <div id="mainContent">
             <div class="container">
                <div class="row first-line">
-                   <div class="col-12 col-lg-8 col-xl-9">
+                   <div class="col-12 col-lg-8 col-xl-9 top">
                       <a class="btn btn-outline-danger" href="/show" style="width: 100px; margin: -20px 0 10px 0;">Kembali</a>
                         <div class="card">
                             <h3>Keranjang Kamu</h3>
@@ -101,29 +101,29 @@
                                 <div class="body-cart">
                                 </div>
                             </div>
-                        </div>
-                   </div>
-                   <div class="col-12 col-lg-4 col-xl-3">
-                        <div class="wrapper-delivery">
-                            <div class="card">
-                                <h4>Pengiriman</h4>
-                                
-                                <div class="total-fix">
-                                    <p>Total</p>
-                                    <p class="value-total-fix">Rp. 0</p>
+                            <div class="col-12 col-lg-4 col-xl-3 bottom">
+                                <div class="wrapper-delivery">
+                                    <div class="card">
+                                        <h4>Pengiriman</h4>
+                                        
+                                        <div class="total-fix">
+                                            <p>Total</p>
+                                            <p class="value-total-fix">Rp. 0</p>
+                                        </div>
+                                    @if (Route::has('login'))
+                                        @auth
+                                            <a href="/checkout" class="button button-primary w-100 text-decoration-none">
+                                                Checkout
+                                            </a>
+                                        @else
+                                        <a href="/login" class="button button-primary w-100 text-decoration-none">
+                                            Masuk dan Checkout
+                                        </a>
+                                        @endauth
+                                    @endif
+                                    </div>
                                 </div>
-                             @if (Route::has('login'))
-                                @auth
-                                    <a href="/checkout" class="button button-primary w-100 text-decoration-none">
-                                        Checkout
-                                    </a>
-                                @else
-                                <a href="/login" class="button button-primary w-100 text-decoration-none">
-                                    Masuk dan Checkout
-                                </a>
-                                @endauth
-                            @endif
-                            </div>
+                        </div>
                         </div>
                    </div>
                </div>

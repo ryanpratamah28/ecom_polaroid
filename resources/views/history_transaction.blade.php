@@ -54,29 +54,31 @@
             <div class="container">
                 <div class="first-line">
                     <div class="row">
-                        <div class="col-12 col-lg-4 col-xl-3 mb-4 mb-lg-0">
-                            <div class="card card-user-menu">
-                                <div class="user-detail">
-                                    <img src="./assets/faces/1.jpg" alt="">
-                                    <p class="name-user">{{Auth::user()->name}}</p>
-                                </div>
-                                <div class="menu-profile">
-                                    <a href="/profile" class="menu">
-                                        <ion-icon name="person"></ion-icon>
-                                        Akun
-                                    </a>
-                                    <a href="/history" class="menu">
-                                        <ion-icon name="cart"></ion-icon>
-                                        Riwayat Transaksi
-                                    </a>
-                                    <a href="{{route('logout')}}" class="menu logout">
-                                        <ion-icon name="log-out"></ion-icon>
-                                        Keluar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-8 col-xl-9">
+                        <div class="col-12 col-lg-4 col-xl-3 mb-4 mb-lg-0 navbar" style="width: 100%;">
+                           <div class="card card-user-menu" style="width: 100%;">
+                                    <div class="menu-profile">
+                                        <div class="user-detail">
+                                            <img src="./assets/faces/1.jpg" alt="">
+                                            <p class="name-user">{{Auth::user()->name}}</p>
+                                        </div>
+                                    <div class="user2">
+                                        <a href="/profile" class="menu account">
+                                            <ion-icon name="person"></ion-icon>
+                                            Akun 
+                                        </a>
+                                        <a href="/history" class="menu history">
+                                            <ion-icon name="cart"></ion-icon>
+                                            Riwayat Transaksi
+                                        </a>
+                                        <a href="{{route('logout')}}" class="menu">
+                                            <ion-icon name="log-out"></ion-icon>
+                                            Keluar
+                                        </a>
+                                    </div>
+                               </div>
+                           </div>
+                       </div>
+                        <div class="col-12">
                             <div class="card">
                                 <div class="history-container">
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
