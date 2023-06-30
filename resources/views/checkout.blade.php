@@ -285,7 +285,7 @@
                                 <input class="form-control image-product" name="image-product" readonly/>
                             </div>
                         </div>
-                            <button type="submit" class="button button-primary w-100" id="submitButton">Pay</button>
+                            <button type="submit" class="button button-primary w-100" id="submitButton">Bayar</button>
                     </form>
                 </div>
             </div>
