@@ -147,7 +147,7 @@
         <div id="mainContent">
             <div class="container">
                 <div class="row first-line">
-                    <div class="col-12 col-lg-8 col-xl-9">
+                    <div class="col-12 col-lg-8 col-xl-9 top">
                         <a class="btn btn-outline-danger" href="/show"
                             style="width: 100px; margin: -20px 0 10px 0;">Kembali</a>
                         <div class="card">
@@ -247,26 +247,26 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 col-xl-3">
-                        <div class="wrapper-summary">
-                            <div class="card">
-                                <h4>Total Order</h4>
-                                <div class="detail-summary">
-                                    <div class="total-order">
-                                        <p>Jumlah Order</p>
-                                        <p><span>1</span> Produk</p>
-                                    </div>
-                                    <div class="total-price">
-                                        <p>Harga</p>
-                                        <p>Rp. <span>0</span></p>
+                            <div class="col-12 col-lg-4 col-xl-3 bottom">
+                                <div class="wrapper-summary">
+                                    <div class="card">
+                                        <h4>Total Order</h4>
+                                        <div class="detail-summary">
+                                            <div class="total-order">
+                                                <p>Jumlah Order</p>
+                                                <p><span>1</span> Produk</p>
+                                            </div>
+                                            <div class="total-price">
+                                                <p>Harga</p>
+                                                <p>Rp. <span>0</span></p>
+                                            </div>
+                                        </div>
+                                        <button id="add-to-cart" class="button button-primary w-100">
+                                            <img src="../../assets/img/icon/shopping-cart-white.svg" alt="">
+                                            Tambah ke Keranjang
+                                        </button>
                                     </div>
                                 </div>
-                                <button id="add-to-cart" class="button button-primary w-100">
-                                    <img src="../../assets/img/icon/shopping-cart-white.svg" alt="">
-                                    Tambah ke Keranjang
-                                </button>
                             </div>
                         </div>
                     </div>
