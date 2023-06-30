@@ -163,6 +163,41 @@ Resset Css
   font-weight: 500;
 }
 
+@media screen and (max-width: 968px){
+.col-12.col-lg-4.col-xl-3.mb-4.mb-lg-0.navbar{
+  width: 100%;
+}
+
+.col-12.col-lg-4.col-xl-3.mb-4.mb-lg-0.navbar .card.card-user-menu .menu-profile{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  column-gap: 0;
+}
+
+.user-detail{
+  justify-content: left !important;
+  margin-left: -15px;
+}
+
+.user2{
+  display: flex;
+  justify-content: right !important;
+  height: 40px !important;
+}
+
+.user2 .menu{
+  width: 100px;
+  height: 50px;
+  margin-top: 13px;
+  margin-left: -15px;
+}
+
+.user2 .menu.history{
+  width: 200px;
+}
+}
+
 @media screen and (max-width: 576px) {
   .profile-data .profile-images-wrapper .profile-image img {
     max-width: 124px;
