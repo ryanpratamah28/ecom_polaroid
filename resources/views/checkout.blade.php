@@ -63,12 +63,6 @@
 
         <div id="mainContent">
             <div class="container">
-                <div class="alert alert-warning" class="alert" role="alert">
-                    <div class="icon-alert">
-                        <img src="./assets/img/icon/alert-icon.svg" alt="">
-                    </div>
-                    Pastikan Gambar Data produk anda sudah masuk!
-                </div>
                 <div class="checkout-container first-line card">
                     <h4>Informasi Checkout</h4>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -82,6 +76,12 @@
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-personalData" role="tabpanel"
                             aria-labelledby="nav-personalData-tab">
+                                    <div class="alert alert-warning" class="alert" role="alert">
+                                        <div class="icon-alert">
+                                            <img src="./assets/img/icon/alert-icon.svg" alt="">
+                                        </div>
+                                        Pastikan Gambar Data produk anda sudah masuk!
+                                    </div>
                             <form action="" method="" enctype="multipart/form-data" id="customerForm">
                                 <h5 class="titleForm">Informasi Pribadi</h5>
                                     <div class="row">
@@ -133,14 +133,21 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="detail-customer">
+                                    <div class="alert alert-warning" class="alert" role="alert">
+                                        <div class="icon-alert">
+                                            <img src="./assets/img/icon/alert-icon.svg" alt="">
+                                        </div>
+                                        Pastikan Gambar Data produk anda sudah masuk!
+                                    </div>
+                                        <h4>Informasi Pribadi</h4>
                                         <p class="email"></p>
-                                        <h5 class="name-customer"></h5>
+                                        <h6 class="name-customer"></h6>
                                         <p class="number-phone"></p>
                                         <p class="address"></p>
                                     </div>
                                 
                                     <div class="shipping-detail">
-                                        <h5>Belanjaan Anda</h5>
+                                        <h4>Belanjaan Anda</h4>
                                         <p>Mohon pastikan anda memesan barang yang benar !!</p>
 
                                         <div class="wrapper-item">
