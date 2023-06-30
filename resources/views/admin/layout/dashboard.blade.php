@@ -164,7 +164,8 @@
                               <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                                   @else
                               <img src="{{asset('assets/img/' .Auth::user()->image_profile)}}" alt class="w-px-40 h-auto rounded-circle" />
-                              @endif                            </div>
+                              @endif                           
+                            </div>
                           </div>
                           <div class="flex-grow-1">
                             <span class="fw-semibold d-block">{{Auth::user()->name}}</span>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FP E-Commerce</title>
+    <title>MISOBAE.ID</title>
 
     <link rel="stylesheet" href="assets/css/homepage.css">
     <link rel="stylesheet" href="assets/css/app.css">
@@ -26,17 +26,16 @@
     <nav class="navbar navbar-expand-lg fixed-top bg-body-light" style="padding: 0 !important">
         <div class="container">
             <a class="navbar-brand text-decoration-none" href="/show">
-                <h1 class="text-logo" style="color:#8d6e63">FP</h1>
+                <h2 class="text-logo" style="color:#8d6e63">MISOBAE.ID</h2>
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <ul class="navbar-nav mb-2 mb-md-0">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{{ route('homepage') }}">Beranda</a>
                     </li>
@@ -44,29 +43,27 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/show">Belanja</a>
                     </li>
-                </ul>
-                <div class="slicing-color"></div>
-                @if (Route::has('login'))
-                    @auth
-                        <a class="btn btn-light" href="{{ route('logout') }}">
-                            <img src="assets/img/homepage/icons8-login-50.png" width="20" height="20">
-                            Keluar
-                        </a>
-                    @else
-                        <a class="btn btn-light" href="/login">
-                            <img src="assets/img/homepage/icons8-login-50.png" width="20" height="20">
-                            Masuk
-                        </a>
-                        @if (Route::has('register'))
-                            <a class="btn btn-light" href="/register">
-                                <img src="assets/img/homepage/icons8-login-50.png" width="20" height="20">
-                                Daftar
-                            </a>
+
+                    <li class="nav-item d-flex align-items-center">
+                        @if (Route::has('login'))
+                            @auth
+                                <a href="{{ route('logout') }}" class="nav-link text-decoration-none">
+                                    Keluar
+                                </a>
+                            @else
+                                <a href="/login" class="nav-link text-decoration-none">
+                                    Masuk
+                                </a>
+                                @if (Route::has('register'))
+                                    <a href="/register" class="nav-link text-decoration-none">
+                                        Daftar
+                                    </a>
+                                @endif
+                            @endauth
                         @endif
-                    @endauth
-                @endif
+                    </li>
+                </ul>
             </div>
-        </div>
         </div>
     </nav>
 
@@ -76,8 +73,7 @@
                 <div class="content1" id="content1">
                     <div class="col-7">
                         <h1>
-                            "Kembali ke Keajaiban Fotografi Instan: <span>Temukan Dunia Polaroid</span> dengan Layanan
-                            E-commerce Kami yang Eksklusif"
+                            <span>MISOBAE.ID</span>
                         </h1>
                         <p>Jasa e-commerce Polaroid kami adalah platform online yang menghadirkan pengalaman fotografi
                             instan yang menyenangkan dan unik. Kami menyediakan berbagai produk dan layanan terkait
@@ -85,84 +81,27 @@
                             berkualitas tinggi dengan mudah melalui platform kami.
                         </p>
                         <div class="flex-button-content1">
-                            <a class="btn text-white" href="/show" style="background-color: #8d6e63">Belanja Sekarang</a>
+                            <a class="btn text-white" href="/show" style="background-color: #8d6e63">Belanja
+                                Sekarang</a>
                         </div>
                     </div>
 
                     <div class="col-5">
-                        <img src="assets/img/homepage/undraw_empty_cart_co35.svg">
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="d-flex flex-inline">
-                        <div class="m-3">
-                            <h1 class="text-center">{{ $products->count() }}</h1>
-                            <small>Produk</small>
-                        </div>
-                        <div class="m-3">
-                            <h1 class="text-center">{{ $user->count() }}</h1>
-                            <small>Pengguna</small>
-                        </div>
-                        <div class="m-3">
-                            <h1 class="text-center">{{ $category->count() }}</h1>
-                            <small>Kategori</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="content3" id="content3">
-                    <div class="flex-content3">
-                        <div class="image-absolute">
-                            <img class="circle-shapes1" src="assets/img/homepage/circle-shapes.png" width="200px"
-                                style="margin: 0 0 0 0;">
-                            <img class="circle-shapes2" src="assets/img/homepage/circle-shapes.png" width="300px"
-                                style="margin: 0 0 0 1000px;">
-                            <img class="hexagon" src="assets/img/homepage/hexagon-shapes.png" width="300px"
-                                style="margin: 140px 0 0 440px;">
-                            <img class="line" src="assets/img/homepage/line-shapes.png" width="350px"
-                                style="margin: 390px 0 0 -30px;">
-                        </div>
-                        <div class="image-content3">
-                            <img src="assets/img/homepage/">
-                        </div>
-                        <div class="text-content3">
-                            <h5>FP</h5>
-                            <h2> Marketplace Penyedia Jasa Foto Polaroid Di Indonesia </h2>
-                            <p> Salah satu keunggulan jasa e-commerce kami adalah ketersediaan film Polaroid yang
-                                lengkap. Pengguna dapat dengan mudah membeli film Polaroid dalam berbagai varian dan
-                                ukuran, memastikan mereka selalu memiliki persediaan film yang cukup untuk mengabadikan
-                                momen-momen berharga dalam bentuk cetakan langsung yang unik dan khas dari kamera
-                                Polaroid.</p>
-                        </div>
+                        <img src="assets/img/polaroid-4.png">
                     </div>
                 </div>
 
                 <div class="content4" id="content4">
-                    <h5>PRODUK / JASA</h5>
-                    <h2>PAKET PEMBELIAN</h2>
+                    <h2>CONTOH PRODUK DAN JASA</h2>
                     <div class="multiple-items">
-                        @foreach ($products as $product)
-                            <div class="card">
-                                <img class="card-img-top" style="padding: 20px; height: 300px;"
-                                    src="{{ asset('storage/images/' . $product->thumb_img) }}" alt="">
-
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $product->name }}</h5>
-                                    <p class="card-text">Rp. {{ number_format($product->price, 0, ',', '.') }}</p>
-                                    <a href="{{ route('detail.product', $product->id) }}" class="btn btn-dark"
-                                        style="width: 100%;">Lihat Detail</a>
-                                </div>
-                            </div>
-                        @endforeach
+                        <img src="assets/img/polaroid-1.png" alt="" width="60">
+                        <img src="assets/img/polaroid-2.png" alt="" width="60">
+                        <img src="assets/img/polaroid-3.png" alt="" width="60">
+                        <img src="assets/img/polaroid-4.png" alt="" width="60">
                     </div>
                 </div>
 
                 <div class="content5 d-flex" id="content5">
-                    <div class="col-5 left">
-                        <h5>Kenali kami</h5>
-                        <h2>Pertanyaan yang Sering Diajukan</h2>
-                    </div>
                     <div class="col-7 right">
                         <button class="collapsible">Apa itu e-commerce jasa Polaroid?
                         </button>
@@ -209,24 +148,31 @@
                                 kami jual adalah produk asli dan memenuhi standar kualitas yang tinggi.</p>
                         </div>
                     </div>
+                    <div class="col-5 left text-end">
+                        <h5>MISOBAE.ID</h5>
+                        <h2>Pertanyaan Yang Biasa Diajukan</h2>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <footer>
-        <div class="icon-sosmed">
-            <div style="width: 50px; height: 50px; background-color: white; border-radius: 40px;">
-                <img src="assets/img/homepage/instagram.svg" width="25px" style="margin-top: 12px;">
-            </div>
-            <div style="width: 50px; background-color: white; border-radius: 40px;">
-                <img src="assets/img/homepage/envelope.svg" width="25px" style="margin-top: 12px;">
-            </div>
-            <div style="width: 50px; background-color: white; border-radius: 40px;">
-                <img src="assets/img/homepage/telephone.svg" width="25px" style="margin-top: 12px;">
+        <div class="container">
+            <p class="alamat">MISOBAE.ID</p>
+
+            <div class="icon-sosmed">
+                <div style="width: 50px; height: 50px; background-color: white; border-radius: 40px;">
+                    <img src="assets/img/homepage/instagram.svg" width="25px" style="margin-top: 12px;">
+                </div>
+                <div style="width: 50px; background-color: white; border-radius: 40px;">
+                    <img src="assets/img/homepage/envelope.svg" width="25px" style="margin-top: 12px;">
+                </div>
+                <div style="width: 50px; background-color: white; border-radius: 40px;">
+                    <img src="assets/img/homepage/telephone.svg" width="25px" style="margin-top: 12px;">
+                </div>
             </div>
         </div>
-        <p class="alamat">FP E-Commerce</p>
     </footer>
 
     <!--Jquery-->

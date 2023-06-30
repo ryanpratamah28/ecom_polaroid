@@ -4,26 +4,36 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Product;
+use App\Models\Category;
 use App\Models\Checkout;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+
 class AdminController extends Controller
 {
     public function index(){
         $user = User::where('id', Auth::user()->id)->first();
-        return view('admin.dashboard_admin', compact('user'));
+
+        $products = Product::all();
+        $categories = Category::all();
+        $users = User::all();
+        $orders = Checkout::all();
+
+        return view('admin.dashboard.home', compact('user', 'products', 'categories', 'users', 'orders'));
     }
+
 
     public function userData(){
         $userData = User::all();
         return view('admin.manage_user.list_user', compact('userData'))->with('i');
     }
 
-public function listOrder()
-{
-    $order = Checkout::with('user')->get();
-    return view('admin.order.list-order', compact('order'))->with('i');
-}
+    public function listOrder()
+    {
+        $order = Checkout::with('user')->get();
+        return view('admin.order.list-order', compact('order'))->with('i');
+    }
 
     public function detail_pembayaran($id){
         $bukti = Checkout::where('id', $id)->first();
