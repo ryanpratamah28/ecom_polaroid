@@ -28,6 +28,61 @@ Resset Css
           justify-content: center;
 }
 
+.row{
+  display: flex;
+  flex-direction: column !important;
+}
+
+.col-12.col-lg-4.col-xl-3.mb-4.mb-lg-0.navbar{
+  width: 100%;
+}
+
+.col-12.col-lg-4.col-xl-3.mb-4.mb-lg-0.navbar .card.card-user-menu .menu-profile{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  column-gap: 200px;
+}
+
+.user-detail{
+  justify-content: left !important;
+}
+
+.user2{
+  display: flex;
+  justify-content: right !important;
+  height: 40px !important;
+}
+
+.user2 .menu{
+  width: 100px;
+  height: 50px;
+  margin-top: 13px;
+  margin-left: 20px;
+}
+
+.user2 .menu.history{
+  width: 200px;
+}
+
+.col-12.col-lg-8.col-xl-9.content{
+  width: 100%;
+}
+
+.col-12.col-md-4.mb-4.mb-md-0 .greetings{
+  width: 100%;
+}
+
+.row .d-flex{
+  margin-top: 30px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.d-flex tbody{
+  text-align: left !important;
+}
+
 .profile-data .profile-images-wrapper .profile-image {
   margin-bottom: 1rem;
 }

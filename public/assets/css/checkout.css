@@ -24,6 +24,19 @@ body {
     background-color: #f6f7fb;
 }
 
+.alert{
+    margin-top: 130px;
+}
+
+.wrapper-summary .card{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.checkout-container{
+    margin-top: 0;
+}
+
 /*Colors palette*/
 .titleForm {
     font-weight: 600;

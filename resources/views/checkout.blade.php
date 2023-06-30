@@ -63,6 +63,12 @@
 
         <div id="mainContent">
             <div class="container">
+                <div class="alert alert-warning" class="alert" role="alert">
+                    <div class="icon-alert">
+                        <img src="./assets/img/icon/alert-icon.svg" alt="">
+                    </div>
+                    Pastikan Gambar Data produk anda sudah masuk!
+                </div>
                 <div class="checkout-container first-line card">
                     <h4>Informasi Checkout</h4>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -79,38 +85,38 @@
                             <form action="" method="" enctype="multipart/form-data" id="customerForm">
                                 <h5 class="titleForm">Informasi Pribadi</h5>
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <div class="form-input">
                                                 <label for="firstName" class="form-label">Nama</label>
                                                 <input type="text" value="{{Auth::user()->name}}" name="name" class="form-control" id="firstName">
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <div class="form-input">Nomor Telepon</label>
                                                 <input type="number" value="{{Auth::user()->phone}}" name="phone" class="form-control" id="phone">
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <div class="form-input">
                                                 <label class="form-label">Alamat</label>
                                                 <input type="text" value="{{Auth::user()->adress}}" name="adress" class="form-control" id="address">
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <div class="form-input">
                                                 <label for="username" class="form-label">Email</label>
                                                 <input type="email" name="email" value="{{Auth::user()->email}}" class="form-control" id="email">
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <label for="username" class="form-label">Produk kamu</label>
                                             <textarea style="margin-top: 0;" class="form-control product" name="product" readonly></textarea>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <label for="username" class="form-label">Harga</label>
-                                            <input class="form-control price" name="price" id="price" readonly/>
+                                            <input class="form-control price" name="price" id="price" readonly/><br>
                                         </div>
-                                        <div class="col-6" style="display: none;">
+                                        <div class="col-12" style="display: none;">
                                             <label for="username" class="form-label">Gambar Produk</label>
                                             <input class="form-control image-product" name="image-product" readonly/>
                                         </div>
@@ -125,7 +131,7 @@
                         <div class="tab-pane fade paymentConfirmation" id="nav-paymentConfirmation" role="tabpanel"
                             aria-labelledby="nav-paymentConfirmation-tab">
                             <div class="row">
-                                <div class="col-12 col-lg-8">
+                                <div class="col-12">
                                     <div class="detail-customer">
                                         <p class="email"></p>
                                         <h5 class="name-customer"></h5>
@@ -150,7 +156,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-4">
+                                <div class="col-12">
                                     <div class="wrapper-summary">
                                         <form action="">
                                             <div class="card">
@@ -177,12 +183,6 @@
                                                             data-bs-target="#modalDanaMethode">
                                                             <p>Dana</p>
                                                         </button>
-                                                        <button class="dropdown-item"
-                                                            data-bs-toggle="modalPaypalMethode"
-                                                            data-bs-target="#modalPaypalMethode">Paypal</button>
-                                                        <button class="dropdown-item"
-                                                            data-bs-toggle="modalMidtransMethode"
-                                                            data-bs-target="#modalMidtransMethode">Midtrans</button>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -226,8 +226,8 @@
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li>Transfer ke nomor<span class="bold-text">08735218721</span> atas nama 
-                                    Ajat Supriana.</li>
+                                <li>Transfer ke nomor<span class="bold-text">+62 857-1881-3616</span> atas nama 
+                                    Dimas</li>
                                 <li>Pastikan Transfer Berhasil</li>
                                 <li>Screenshoot bukti transfer atau pembayaran</li>
                                 <li>Upload Bukti di kolom bawah dan submit</li>

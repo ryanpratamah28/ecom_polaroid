@@ -20,6 +20,29 @@ p {
     font-family: "Poppins", sans-serif;
 }
 
+.first-line{
+    display: flex;
+    flex-direction: column;
+}
+
+.col-12.col-lg-8.col-xl-9.top{
+    width: 100%;
+}
+
+.col-12.col-lg-4.col-xl-3.bottom{
+    border-radius: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.col-12.col-lg-4.col-xl-3.bottom .card{
+    margin-top: -40px;
+}
+
+.wrapper-delivery{
+    margin-top: 50px;
+}
+
 /*Colors palette*/
 .first-line h3 {
     margin-bottom: 1rem;

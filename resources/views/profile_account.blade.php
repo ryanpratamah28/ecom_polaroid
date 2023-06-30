@@ -52,29 +52,31 @@
             <div class="container">
                <div class="profileContainer first-line">
                    <div class="row">
-                       <div class="col-12 col-lg-4 col-xl-3 mb-4 mb-lg-0">
-                           <div class="card card-user-menu">
-                               <div class="user-detail">
-                                   <img src="./assets/faces/1.jpg" alt="">
-                                   <p class="name-user">{{Auth::user()->name}}</p>
-                               </div>
-                               <div class="menu-profile">
-                                    <a href="/profile" class="menu">
-                                        <ion-icon name="person"></ion-icon>
-                                        Akun 
-                                    </a>
-                                    <a href="/history" class="menu">
-                                        <ion-icon name="cart"></ion-icon>
-                                        Riwayat Transaksi
-                                    </a>
-                                    <a href="{{route('logout')}}" class="menu logout">
-                                        <ion-icon name="log-out"></ion-icon>
-                                        Keluar
-                                    </a>
+                       <div class="col-12 col-lg-4 col-xl-3 mb-4 mb-lg-0 navbar" style="width: 100%;">
+                           <div class="card card-user-menu" style="width: 100%;">
+                                    <div class="menu-profile">
+                                        <div class="user-detail">
+                                            <img src="./assets/faces/1.jpg" alt="">
+                                            <p class="name-user">{{Auth::user()->name}}</p>
+                                        </div>
+                                    <div class="user2">
+                                        <a href="/profile" class="menu account">
+                                            <ion-icon name="person"></ion-icon>
+                                            Akun 
+                                        </a>
+                                        <a href="/history" class="menu history">
+                                            <ion-icon name="cart"></ion-icon>
+                                            Riwayat Transaksi
+                                        </a>
+                                        <a href="{{route('logout')}}" class="menu">
+                                            <ion-icon name="log-out"></ion-icon>
+                                            Keluar
+                                        </a>
+                                    </div>
                                </div>
                            </div>
                        </div>
-                       <div class="col-12 col-lg-8 col-xl-9">
+                       <div class="col-12 col-lg-8 col-xl-9 content">
                            <div class="card profile-data">
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                     <button class="nav-link active" id="nav-profileData-tab" data-bs-toggle="tab" data-bs-target="#nav-profileData" type="button" role="tab" aria-controls="nav-profileData" aria-selected="true">Profile Setting</button>
@@ -83,7 +85,7 @@
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="nav-profileData" role="tabpanel" aria-labelledby="nav-profileData-tab">
                                         <div class="row">
-                                            <div class="col-12 col-lg-4 mb-5 mb-lg-0">
+                                            <div class="col-12">
                                                 <div class="profile-images-wrapper">
                                                     <div class="profile-image">
                                                         @if (is_null($user['image_profile']))
@@ -100,8 +102,8 @@
                                                     <p class="info">File besar: maksimal 4.000.000 byte (4 MB). file yang diizinkan: .extensionJPG .JPEG .PNG</p>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-lg-8">
-                                                <div class="biodata-user">
+                                            <div class="d-flex">
+                                                <div class="biodata-user col-6">
                                                     <h5 class="title-data-user">Profil Data Kamu</h5>
                                                     <div class="table-data-user">
                                                         <table>
@@ -122,7 +124,7 @@
                                                         </table>
                                                     </div>
                                                 </div>
-                                                <div class="address-user">
+                                                <div class="address-user col-6">
                                                     <h5 class="title-data-user">Alamat Kamu</h5>
                                                     <p>{{Auth::user()->adress}}</p>
                                                 </div>
@@ -190,7 +192,7 @@
                                                     <p>Ubah <span class="text-dark">keamanan akun</span> disini.</p>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-8">
+                                            <div class="col-12">
                                                 <h5 class="title-data-user">Ganti Password</h5>
                                                 <form action="{{route('password.change')}}" method="POST" enctype="multipart/form-data">
                                                     @csrf
