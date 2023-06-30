@@ -285,7 +285,7 @@
                                 <input class="form-control image-product" name="image-product" readonly/>
                             </div>
                         </div>
-                            <button type="submit" class="button button-primary w-100">Pay</button>
+                            <button type="submit" class="button button-primary w-100" id="submitButton">Pay</button>
                     </form>
                 </div>
             </div>
@@ -638,7 +638,20 @@ function calculateTotalPrice() {
     }
   });
 </script>
+<script>
+  // Fungsi untuk menghapus data di localStorage
+  function clearCartData() {
+    localStorage.removeItem('cartData');
+  }
 
+  // Mendapatkan tombol submit berdasarkan ID
+  var submitButton = document.getElementById('submitButton');
+
+  // Menjalankan fungsi displayCustomerDetails saat tombol submit ditekan
+  submitButton.addEventListener('click', function(event) {
+    clearCartData(); // Menghapus data di localStorage
+  });
+</script>
 
 
 </html>
