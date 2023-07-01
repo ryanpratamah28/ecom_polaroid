@@ -10,7 +10,7 @@
 
                 <div class="mb-4">
                     <label class="form-label" for="basic-default-fullname">Nama Kategori</label>
-                    <input type="text" class="form-control" placeholder="Gadget" name="name"/>
+                    <input type="text" class="form-control" placeholder="Paket 1" name="name"/>
                     @error('name')
                         <div class="form-text text-danger">{{ $message }}</div>
                     @enderror

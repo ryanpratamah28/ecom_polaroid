@@ -188,7 +188,7 @@
                                                             class="dropdown-item d-flex justify-content-between"
                                                             data-bs-toggle="modal"
                                                             data-bs-target="#modalDanaMethode">
-                                                            <p>Dana</p>
+                                                            <p>Transfer</p>
                                                         </button>
                                                     </ul>
                                                 </div>
@@ -214,7 +214,7 @@
                             data-bs-toggle="modal">
                             <ion-icon name="chevron-back-outline"></ion-icon>
                         </div>
-                        <h5 class="modal-title" id="exampleModalToggleLabel2">Dana</h5>
+                        <h5 class="modal-title" id="exampleModalToggleLabel2">Transfer</h5>
                     </div>
                 </div>
                 <div class="modal-body">
@@ -233,7 +233,7 @@
                         </div>
                         <div class="card-body">
                             <ul>
-                                <li>Transfer ke nomor<span class="bold-text">+62 857-1881-3616</span> atas nama 
+                                <li>Transfer ke nomor <span class="bold-text">+62 857-1881-3616</span> atas nama 
                                     Dimas</li>
                                 <li>Pastikan Transfer Berhasil</li>
                                 <li>Screenshoot bukti transfer atau pembayaran</li>
@@ -244,7 +244,7 @@
 
                     <form action="{{route('pembayaran')}}" method="POST" enctype="multipart/form-data">
                         @csrf
-                            <p>Enter Proof of Transfer</p>
+                            <p>Upload Bukti Pembayaran</p>
                             <div class="form-input">
                                 <input type="file" name="bukti_pembayaran" class="form-control" >
                             </div>

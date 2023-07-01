@@ -9,7 +9,7 @@
 
                 <div class="mb-3">
                     <label class="form-label" for="basic-default-fullname">Nama Produk</label>
-                    <input type="text" class="form-control" placeholder="Chargeran Handphone" name="name" />
+                    <input type="text" class="form-control" placeholder="Polaroid 2 x 3" name="name" />
                     @error('name')
                         <div class="form-text text-danger">{{ $message }}</div>
                     @enderror
@@ -39,7 +39,7 @@
 
                 <div class="mb-3">
                     <label class="form-label" for="basic-default-company">Deskripsi</label>
-                    <input type="text" class="form-control" placeholder="Ini adalah chargeran handphone kualitas terbaik"
+                    <input type="text" class="form-control" placeholder="Ini adalah paket 2 polaroid dengans kualitas terbaik"
                         name="description" />
                     @error('description')
                         <div class="form-text text-danger">{{ $message }}</div>
