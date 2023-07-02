@@ -62,15 +62,15 @@
                                     <div class="user2">
                                         <a href="/profile" class="menu account">
                                             <ion-icon name="person"></ion-icon>
-                                            Akun 
+                                            <span>Akun</span> 
                                         </a>
                                         <a href="/history" class="menu history">
                                             <ion-icon name="cart"></ion-icon>
-                                            Riwayat Transaksi
+                                            <span>Riwayat Transaksi</span>
                                         </a>
                                         <a href="{{route('logout')}}" class="menu">
                                             <ion-icon name="log-out"></ion-icon>
-                                            Keluar
+                                            <span>Keluar</span>
                                         </a>
                                     </div>
                                </div>
@@ -102,7 +102,7 @@
                                                     <p class="info">File besar: maksimal 4.000.000 byte (4 MB). file yang diizinkan: .extensionJPG .JPEG .PNG</p>
                                                 </div>
                                             </div>
-                                            <div class="d-flex">
+                                            <div class="d_flex">
                                                 <div class="biodata-user col-6">
                                                     <h5 class="title-data-user">Profil Data Kamu</h5>
                                                     <div class="table-data-user">

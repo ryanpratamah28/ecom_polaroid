@@ -64,15 +64,15 @@
                                     <div class="user2">
                                         <a href="/profile" class="menu account">
                                             <ion-icon name="person"></ion-icon>
-                                            Akun 
+                                            <span>Akun</span>
                                         </a>
                                         <a href="/history" class="menu history">
                                             <ion-icon name="cart"></ion-icon>
-                                            Riwayat Transaksi
+                                            <span>Riwayat Transaksi</span>
                                         </a>
                                         <a href="{{route('logout')}}" class="menu">
                                             <ion-icon name="log-out"></ion-icon>
-                                            Keluar
+                                            <span>Keluar</span>
                                         </a>
                                     </div>
                                </div>
