@@ -73,10 +73,11 @@ Resset Css
   width: 100%;
 }
 
-.row .d-flex{
+.row .d_flex{
   margin-top: 30px;
   text-align: center;
   flex-wrap: wrap;
+  display: flex;
 }
 
 .d-flex tbody{
@@ -198,6 +199,33 @@ Resset Css
 }
 }
 
+@media screen and (max-width: 768px){
+.col-12.col-lg-4.col-xl-3.mb-4.mb-lg-0.navbar{
+  width: 100%;
+}
+
+.col-12.col-lg-4.col-xl-3.mb-4.mb-lg-0.navbar .card.card-user-menu .menu-profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  column-gap: 0;
+}
+
+}
+
+@media screen and (max-width: 380px) {
+  .col-12.col-lg-4.col-xl-3.mb-4.mb-lg-0.navbar .card.card-user-menu .menu-profile a span{
+    display: none;
+}
+  .menu-profile .menu{
+    width: 50px;
+  }
+
+    .menu-profile .menu.history{
+    width: 50px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .profile-data .profile-images-wrapper .profile-image img {
     max-width: 124px;
@@ -211,6 +239,22 @@ Resset Css
   }
   .profile-data .address-user p {
     font-size: 12px;
+  }
+    .row .d_flex{
+    margin-top: 30px;
+    text-align: center;
+    flex-wrap: wrap;
+    display: block;
+  }
+
+  .biodata-user.col-6{
+    width: 100%;
+    text-align: left;
+  }
+
+  .address-user.col-6{
+    width: 100%;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=profile.css.map */

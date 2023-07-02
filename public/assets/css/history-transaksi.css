@@ -95,6 +95,33 @@ body {
 }
 }
 
+@media screen and (max-width: 768px){
+.col-12.col-lg-4.col-xl-3.mb-4.mb-lg-0.navbar{
+  width: 100%;
+}
+
+.col-12.col-lg-4.col-xl-3.mb-4.mb-lg-0.navbar .card.card-user-menu .menu-profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  column-gap: 0;
+}
+
+}
+
+@media screen and (max-width: 380px) {
+  .col-12.col-lg-4.col-xl-3.mb-4.mb-lg-0.navbar .card.card-user-menu .menu-profile a span{
+    display: none;
+}
+  .menu-profile .menu{
+    width: 50px;
+  }
+
+    .menu-profile .menu.history{
+    width: 50px;
+  }
+}
+
 /*Colors palette*/
 .history-item {
   padding: 1.5rem 0;
